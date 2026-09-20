@@ -1,9 +1,9 @@
 //
-//  CollectionViewController.m
-//  LGDrawerDemo
+// CollectionViewController.m
+// LGDrawerDemo
 //
-//  Created by Grigory Lutkov on 18.05.15.
-//  Copyright (c) 2015 Grigory Lutkov. All rights reserved.
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2015 Grigorii Lutkov <grigorii@lutkov.dev>
 //
 
 #import "CollectionViewController.h"
@@ -51,7 +51,7 @@
     if (self)
     {
         self.backgroundColor = [UIColor whiteColor];
-        
+
         _imageView = [UIImageView new];
         _imageView.contentMode = UIViewContentModeCenter;
         _imageView.backgroundColor = [UIColor clearColor];
@@ -63,7 +63,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
+
     _imageView.frame = CGRectMake(0.f, 0.f, self.frame.size.width, self.frame.size.height);
 }
 
@@ -83,9 +83,9 @@
 {
     CGFloat screenWidth = MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     NSUInteger numberOfCellsInARow = screenWidth/100.f;
-    
+
     CGFloat cellSide = (screenWidth-2.f-2.f-2.f*(numberOfCellsInARow-1))/numberOfCellsInARow;
-    
+
     UICollectionViewFlowLayout *collectionViewLayout = [UICollectionViewFlowLayout new];
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(2.f, 2.f, 2.f, 2.f);
     collectionViewLayout.itemSize = CGSizeMake(cellSide, cellSide);
@@ -94,17 +94,17 @@
     collectionViewLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     collectionViewLayout.headerReferenceSize = CGSizeZero;
     collectionViewLayout.footerReferenceSize = CGSizeZero;
-    
+
     self = [super initWithCollectionViewLayout:collectionViewLayout];
     if (self)
     {
         self.view.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1.f];
-        
+
         self.title = @"LGDrawer";
-        
+
         self.collectionView.backgroundColor = [UIColor clearColor];
         [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-        
+
         [self prepareData];
     }
     return self;
@@ -113,7 +113,7 @@
 - (void)prepareData
 {
     _dataArray = [NSMutableArray new];
-    
+
     [_dataArray addObject:[LGDrawer drawRectangleWithImageSize:kImageSize
                                                           size:kSize
                                                         offset:kOffset
@@ -129,7 +129,7 @@
                                                    shadowColor:kShadowColor
                                                   shadowOffset:kShadowOffset
                                                     shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawEllipseWithImageSize:kImageSize
                                                         size:kSize
                                                       offset:kOffset
@@ -143,7 +143,7 @@
                                                  shadowColor:kShadowColor
                                                 shadowOffset:kShadowOffset
                                                   shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawTriangleWithImageSize:kImageSize
                                                          size:CGSizeMake(kSide+kCornerRadius/2, kSide+kCornerRadius/2)
                                                        offset:kOffset
@@ -158,7 +158,7 @@
                                                   shadowColor:kShadowColor
                                                  shadowOffset:kShadowOffset
                                                    shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawPlusWithImageSize:kImageSize
                                                      size:kSize
                                                    offset:kOffset
@@ -175,7 +175,7 @@
                                               shadowColor:kShadowColor
                                              shadowOffset:kShadowOffset
                                                shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawCrossWithImageSize:kImageSize
                                                      size:kSize
                                                    offset:kOffset
@@ -192,7 +192,7 @@
                                               shadowColor:kShadowColor
                                              shadowOffset:kShadowOffset
                                                shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawTickWithImageSize:kImageSize
                                                      size:kSize
                                                    offset:kOffset
@@ -204,7 +204,7 @@
                                               shadowColor:kShadowColor
                                              shadowOffset:kShadowOffset
                                                shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawArrowWithImageSize:kImageSize
                                                       size:CGSizeMake(kSide*0.66, kSide)
                                                     offset:kOffset
@@ -217,7 +217,7 @@
                                                shadowColor:kShadowColor
                                               shadowOffset:kShadowOffset
                                                 shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawArrowTailedWithImageSize:kImageSize
                                                             size:kSize
                                                           offset:kOffset
@@ -230,7 +230,7 @@
                                                      shadowColor:kShadowColor
                                                     shadowOffset:kShadowOffset
                                                       shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawLineWithImageSize:kImageSize
                                                    length:kSide
                                                    offset:kOffset
@@ -243,7 +243,7 @@
                                               shadowColor:kShadowColor
                                              shadowOffset:kShadowOffset
                                                shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawPlusWithImageSize:kImageSize
                                                      size:kSize
                                                    offset:kOffset
@@ -255,7 +255,7 @@
                                               shadowColor:kShadowColor
                                              shadowOffset:kShadowOffset
                                                shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawCrossWithImageSize:kImageSize
                                                       size:kSize
                                                     offset:kOffset
@@ -267,7 +267,7 @@
                                                shadowColor:kShadowColor
                                               shadowOffset:kShadowOffset
                                                 shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawHeartWithImageSize:kImageSize
                                                       size:kSize
                                                     offset:kOffset
@@ -280,7 +280,7 @@
                                                shadowColor:kShadowColor
                                               shadowOffset:kShadowOffset
                                                 shadowBlur:kShadowBlur]];
-    
+
     [_dataArray addObject:[LGDrawer drawStarWithImageSize:kImageSize
                                                      size:kSize
                                                    offset:kOffset
@@ -293,10 +293,10 @@
                                               shadowColor:kShadowColor
                                              shadowOffset:kShadowOffset
                                                shadowBlur:kShadowBlur]];
-    
+
     CGSize size = CGSizeMake(kSide*0.8, kSide*0.6);
     CGFloat thickness = size.height/4;
-    
+
     [_dataArray addObject:[LGDrawer drawMenuWithImageSize:kImageSize
                                                      size:size
                                                    offset:kOffset
@@ -314,11 +314,11 @@
                                               shadowColor:kShadowColor
                                              shadowOffset:kShadowOffset
                                                shadowBlur:kShadowBlur]];
-    
+
     // -----
-    
+
     size = CGSizeMake(kImageSide*0.9, kImageSide*0.9);
-    
+
     UIImage *image1 = [LGDrawer drawEllipseWithImageSize:kImageSize
                                                     size:size
                                                   offset:CGPointZero
@@ -332,9 +332,9 @@
                                              shadowColor:nil
                                             shadowOffset:CGPointZero
                                               shadowBlur:0.f];
-    
+
     size = CGSizeMake(kImageSide*0.55, kImageSide*0.55);
-    
+
     UIImage *image2 = [LGDrawer drawRectangleWithImageSize:size
                                                       size:size
                                                     offset:CGPointZero
@@ -350,9 +350,9 @@
                                                shadowColor:nil
                                               shadowOffset:CGPointZero
                                                 shadowBlur:0.f];
-    
+
     size = CGSizeMake(kImageSide*0.35, kImageSide*0.35);
-    
+
     UIImage *image3 = [LGDrawer drawHeartWithImageSize:size
                                                   size:size
                                                 offset:CGPointZero
@@ -365,15 +365,15 @@
                                            shadowColor:nil
                                           shadowOffset:CGPointZero
                                             shadowBlur:0.f];
-    
+
     [_dataArray addObject:[LGDrawer drawImageOnImage:@[image1,
                                                        image2,
                                                        image3]]];
-    
+
     // -----
-    
+
     size = CGSizeMake(kImageSide*0.9, kImageSide*0.9);
-    
+
     image1 = [LGDrawer drawTriangleWithImageSize:kImageSize
                                             size:size
                                           offset:CGPointZero
@@ -388,9 +388,9 @@
                                      shadowColor:nil
                                     shadowOffset:CGPointZero
                                       shadowBlur:0.f];
-    
+
     size = CGSizeMake(kImageSide*0.45, kImageSide*0.45);
-    
+
     image2 = [LGDrawer drawStarWithImageSize:size
                                         size:size
                                       offset:CGPointZero
@@ -403,9 +403,9 @@
                                  shadowColor:nil
                                 shadowOffset:CGPointZero
                                   shadowBlur:0.f];
-    
+
     size = CGSizeMake(kImageSide*0.35, kImageSide*0.35);
-    
+
     image3 = [LGDrawer drawStarWithImageSize:size
                                         size:size
                                       offset:CGPointZero
@@ -418,9 +418,9 @@
                                  shadowColor:nil
                                 shadowOffset:CGPointZero
                                   shadowBlur:0.f];
-    
+
     size = CGSizeMake(kImageSide*0.3, kImageSide*0.3);
-    
+
     UIImage *image4 = [LGDrawer drawStarWithImageSize:size
                                                  size:size
                                                offset:CGPointZero
@@ -433,28 +433,28 @@
                                           shadowColor:nil
                                          shadowOffset:CGPointZero
                                            shadowBlur:0.f];
-    
+
     UIImage *image5 = [LGDrawer drawImagesWithFinishSize:kImageSize
                                                   image1:image1
                                             image1Offset:CGPointZero
                                                   image2:image2
                                             image2Offset:CGPointMake(0.f, 12.f)
                                                    clear:NO];
-    
+
     image5 = [LGDrawer drawImagesWithFinishSize:kImageSize
                                          image1:image5
                                    image1Offset:CGPointZero
                                          image2:image3
                                    image2Offset:CGPointMake(0.f, 12.5)
                                           clear:NO];
-    
+
     image5 = [LGDrawer drawImagesWithFinishSize:kImageSize
                                          image1:image5
                                    image1Offset:CGPointZero
                                          image2:image4
                                    image2Offset:CGPointMake(0.f, 12.5)
                                           clear:YES];
-    
+
     [_dataArray addObject:image5];
 }
 
@@ -475,9 +475,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
+
     cell.imageView.image = _dataArray[indexPath.item];
-    
+
     return cell;
 }
 

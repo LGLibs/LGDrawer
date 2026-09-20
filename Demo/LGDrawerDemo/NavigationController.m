@@ -1,9 +1,9 @@
 //
-//  NavigationController.m
-//  LGDrawerDemo
+// NavigationController.m
+// LGDrawerDemo
 //
-//  Created by Grigory Lutkov on 18.02.15.
-//  Copyright (c) 2015 Grigory Lutkov. All rights reserved.
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2015 Grigorii Lutkov <grigorii@lutkov.dev>
 //
 
 #import "NavigationController.h"

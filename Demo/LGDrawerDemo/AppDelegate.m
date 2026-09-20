@@ -1,9 +1,9 @@
 //
-//  AppDelegate.m
-//  LGDrawerDemo
+// AppDelegate.m
+// LGDrawerDemo
 //
-//  Created by Grigory Lutkov on 18.05.15.
-//  Copyright (c) 2015 Grigory Lutkov. All rights reserved.
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2015 Grigorii Lutkov <grigorii@lutkov.dev>
 //
 
 #import "AppDelegate.h"
@@ -20,12 +20,12 @@
 {
     CollectionViewController *collectionViewController = [CollectionViewController new];
     NavigationController *navigationController = [[NavigationController alloc] initWithRootViewController:collectionViewController];
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
+
     return YES;
 }
 

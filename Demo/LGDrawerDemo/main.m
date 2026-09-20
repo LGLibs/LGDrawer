@@ -1,9 +1,9 @@
 //
-//  main.m
-//  LGDrawerDemo
+// main.m
+// LGDrawerDemo
 //
-//  Created by Friend_LGA on 18.05.15.
-//  Copyright (c) 2015 Grigory Lutkov. All rights reserved.
+// Created by Friend_LGA on 18.05.15.
+// Copyright (c) 2015 Grigorii Lutkov <grigorii@lutkov.dev>
 //
 
 #import <UIKit/UIKit.h>

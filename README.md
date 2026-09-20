@@ -7,17 +7,17 @@ Also you can combine different images into one image.
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGDrawer/1.png"/>
+<img src="https://raw.githubusercontent.com/LGLibs/ReadmeFiles/master/LGDrawer/1.png"/>
 
 ## Installation
 
 ### With source code
 
-[Download repository](https://github.com/Friend-LGA/LGDrawer/archive/master.zip), then add [LGDrawer directory](https://github.com/Friend-LGA/LGDrawer/blob/master/LGDrawer/) to your project.
+[Download repository](https://github.com/LGLibs/LGDrawer/archive/master.zip), then add [LGDrawer directory](./LGDrawer) to your project.
 
 ### With CocoaPods
 
-CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects. To install with cocoaPods, follow the "Get Started" section on [CocoaPods](https://cocoapods.org/).
+CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects. To install with cocoaPods, follow the "Get Started" section on [CocoaPods](https://cocoapods.org).
 
 #### Podfile
 ```ruby
@@ -27,11 +27,11 @@ pod 'LGDrawer', '~> 1.0.0'
 
 ### With Carthage
 
-Carthage is a lightweight dependency manager for Swift and Objective-C. It leverages CocoaTouch modules and is less invasive than CocoaPods. To install with carthage, follow the instruction on [Carthage](https://github.com/Carthage/Carthage/).
+Carthage is a lightweight dependency manager for Swift and Objective-C. It leverages CocoaTouch modules and is less invasive than CocoaPods. To install with carthage, follow the instruction on [Carthage](https://github.com/Carthage/Carthage).
 
 #### Cartfile
 ```
-github "Friend-LGA/LGDrawer" ~> 1.0.0
+github "LGLibs/LGDrawer" ~> 1.0.0
 ```
 
 ## Usage
@@ -66,8 +66,16 @@ UIImage *rectangle = [LGDrawer drawRectangleWithImageSize:CGSizeMake(90.f, 90.f)
 
 ### More
 
-For more details try Xcode [Demo project](https://github.com/Friend-LGA/LGDrawer/blob/master/Demo) and see [LGDrawer.h](https://github.com/Friend-LGA/LGDrawer/blob/master/LGDrawer/LGDrawer.h)
+For more details try [Xcode Demo Project](./Demo) and see [LGDrawer.h](./LGDrawer/LGDrawer.h)
+
+## Repos / Mirrors
+
+- [TRULAB](https://trulab.ru/LGLibs/LGDrawer)
+- [GitHub](https://github.com/LGLibs/LGDrawer)
+- [GitLab](https://gitlab.com/LGLibs/LGDrawer)
+- [Gitea](https://gitea.com/LGLibs/LGDrawer)
 
 ## License
 
-LGDrawer is released under the MIT license. See [LICENSE](https://raw.githubusercontent.com/Friend-LGA/LGDrawer/master/LICENSE) for details.
+Copyright (c) 2015 Grigorii Lutkov \<grigorii@lutkov.dev\></br>
+Licensed under the [MIT License](./LICENSE)
